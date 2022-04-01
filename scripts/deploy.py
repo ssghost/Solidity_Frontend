@@ -22,7 +22,7 @@ def deploy_contracts():
     update_frontend()
     return token_farm, shit_token
 
-def deploy_mocks(decimals=18, initial_value=2*10**18):
+def deploy_mocks(decimals=18, initial_value=2000*10**18):
     account = get_account()
     LinkToken.deploy({'from': account})
     MockV3Aggregator.deploy(decimals, initial_value, {"from": account})
