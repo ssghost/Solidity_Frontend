@@ -1,0 +1,22 @@
+{
+  "name": "solidity_frontend",
+  "version": "1.0.0",
+  "description": "Solidity contract integrated with typescript UI.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssghost/Solidity_Frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssghost/Solidity_Frontend/issues"
+  },
+  "homepage": "https://github.com/ssghost/Solidity_Frontend#readme"
+}
