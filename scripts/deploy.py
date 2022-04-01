@@ -13,12 +13,12 @@ def deploy_contracts():
     Txn.wait(1)
     weth_token = get_contract('weth_token')
     fau_token = get_contract('fau_token')
-    dict_of_allowed_tokens = {
+    allowed_dict = {
         shit_token: get_contract('dai_usd_price_feed'),
         fau_token: get_contract('dai_usd_price_feed'),
         weth_token: get_contract('eth_usd_price_feed'),
     }
-    add_allowed(token_farm, dict_of_allowed_tokens, account)
+    add_allowed(token_farm, allowed_dict, account)
     update_frontend()
     return token_farm, shit_token
 
