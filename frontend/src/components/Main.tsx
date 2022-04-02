@@ -28,8 +28,9 @@ const useStyles = makeStyles((theme: any) => ({
 export const Main = () => {
     const classes = useStyles()
     const { chainId, error } = useEthers()
-    const networkName = chainId ? helperConfig[chainId] : "dev"
+    let hConfig: {[key: string]: string} = helperConfig
     let stringChainId = String(chainId)
+    const networkName = chainId ? hConfig[stringChainId] : "dev"
     const shitTokenAddress = chainId ? networkMapping[stringChainId]["ShitToken"][0] : constants.AddressZero
     const wethTokenAddress = chainId ? brownieConfig["networks"][networkName]["weth_token"] : constants.AddressZero 
     const fauTokenAddress = chainId ? brownieConfig["networks"][networkName]["fau_token"] : constants.AddressZero
